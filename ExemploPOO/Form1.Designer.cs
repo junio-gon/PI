@@ -44,17 +44,17 @@
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.pnAluno = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtRA = new System.Windows.Forms.TextBox();
+            this.txtCurso = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnProfessor = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.pnPessoa.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnAluno.SuspendLayout();
@@ -209,17 +209,58 @@
             // 
             // pnAluno
             // 
-            this.pnAluno.Controls.Add(this.pnProfessor);
             this.pnAluno.Controls.Add(this.label9);
             this.pnAluno.Controls.Add(this.label10);
-            this.pnAluno.Controls.Add(this.textBox1);
-            this.pnAluno.Controls.Add(this.textBox2);
+            this.pnAluno.Controls.Add(this.txtRA);
+            this.pnAluno.Controls.Add(this.txtCurso);
             this.pnAluno.Controls.Add(this.label7);
             this.pnAluno.Location = new System.Drawing.Point(288, 12);
             this.pnAluno.Name = "pnAluno";
             this.pnAluno.Size = new System.Drawing.Size(248, 393);
             this.pnAluno.TabIndex = 5;
             this.pnAluno.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(28, 121);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 15);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Curso";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(44, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 15);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "RA";
+            // 
+            // txtRA
+            // 
+            this.txtRA.Location = new System.Drawing.Point(91, 70);
+            this.txtRA.Name = "txtRA";
+            this.txtRA.Size = new System.Drawing.Size(100, 23);
+            this.txtRA.TabIndex = 9;
+            // 
+            // txtCurso
+            // 
+            this.txtCurso.Location = new System.Drawing.Point(91, 118);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(100, 23);
+            this.txtCurso.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(55, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 37);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Aluno";
             // 
             // pnProfessor
             // 
@@ -228,7 +269,7 @@
             this.pnProfessor.Controls.Add(this.label12);
             this.pnProfessor.Controls.Add(this.textBox3);
             this.pnProfessor.Controls.Add(this.textBox4);
-            this.pnProfessor.Location = new System.Drawing.Point(17, 10);
+            this.pnProfessor.Location = new System.Drawing.Point(542, 12);
             this.pnProfessor.Name = "pnProfessor";
             this.pnProfessor.Size = new System.Drawing.Size(246, 393);
             this.pnProfessor.TabIndex = 6;
@@ -276,53 +317,12 @@
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 9;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 121);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 15);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Curso";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(44, 72);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 15);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "RA";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(91, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(91, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(55, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 37);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Aluno";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 499);
+            this.ClientSize = new System.Drawing.Size(799, 499);
+            this.Controls.Add(this.pnProfessor);
             this.Controls.Add(this.pnAluno);
             this.Controls.Add(this.pnPessoa);
             this.Controls.Add(this.label1);
@@ -366,8 +366,8 @@
         private RadioButton rbAluno;
         private Label label9;
         private Label label10;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtRA;
+        private TextBox txtCurso;
         private Label label11;
         private Label label12;
         private TextBox textBox3;
