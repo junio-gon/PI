@@ -35,16 +35,67 @@ namespace ExemploPOO
             Aluno aluno = new Aluno();
             Animal animal = new Animal();
             string texto = "";
-            if (objeto.GetType() == aluno.GetType())
+            bool validaDados = validadados();
+
+            if ((objeto.GetType() == aluno.GetType()) || validaDados)
             {
                 aluno = (Aluno) objeto;
                 texto = $"Nome: {aluno.NOME} E-mail: {aluno.EMAIL} RG: {aluno.RG} CPF: {aluno.CPF} RA: {aluno.RA} Curso: {aluno.CURSO} ";
                 label1.Text = texto;
                 //label1.Text = "Nome: " + aluno.NOME + " E-mail: " + aluno.EMAIL + " RG: " + aluno.RG + " CPF: " + aluno.CPF + " RA: " + aluno.RA + " Curso: " + aluno.CURSO;
+                // no geral toda vez que tiver queries, conversão e/ou chamada de recurso externo, utilizamos try catch
                 string diretorio = @"c:\exemplo";
+                if (!Directory.Exists(diretorio))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(diretorio);
+                    }
+                    catch (Exception e)
+                    {
+                        throw new Exception("Erro ao criar o diretório " + e.Message);
+                    }
+                }
+
                 string[] linha = { aluno.NOME, aluno.EMAIL, aluno.RG, aluno.CPF, aluno.RA, aluno.CURSO };
+                try
+                {
+                    File.WriteAllLines($"{diretorio}\\exemplo.txt", linha);
+                }
+                catch (Exception e)
+                {
+                    throw new Exception("Erro ao criar o arquivo " + e.Message);
+                }
+
+                MessageBox.Show("Aluno " + aluno.NOME + " cadastrado com sucesso!!!", "Erro ao Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             
+        }
+
+        private bool validadados() {
+            string mensagem = "";
+            bool result = true;
+            if (String.IsNullOrEmpty( txtNome.Text ) || txtNome.Text.Length == 0)
+            {
+                mensagem += "O campo NOME não pode estar vazio! \n";
+                result = false;
+            }
+            if (String.IsNullOrEmpty(txtEmail.Text) || txtEmail.Text.Length == 0)
+            {
+                mensagem += "O campo EMAIL não pode estar vazio! \n";
+                result = false;
+            }
+            if (!txtEmail.Text.Contains("@") )
+            {
+                mensagem += "Utilize um e-mail válido! \n";
+                result = false;
+            }
+            if (!result)
+            {
+                MessageBox.Show(mensagem, "Erro ao Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return result; 
         }
 
         private void Form1_Load(object sender, EventArgs e)
